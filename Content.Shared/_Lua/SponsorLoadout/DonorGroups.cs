@@ -3,6 +3,7 @@
 // See AGPLv3.txt for details.
 
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Content.Shared._Lua.SponsorLoadout;
 
@@ -11,6 +12,7 @@ public static class DonorGroups
     public const string Shareholder = "Shareholder";
     public const string ShareholderLua = "ShareholderLua";
     public const string God = "God";
+    public const string Boost = "Boost";
     public const string Rank1 = "Rank1";
     public const string Rank2 = "Rank2";
     public const string Rank3 = "Rank3";
@@ -27,6 +29,7 @@ public static class DonorGroups
         Shareholder,
         ShareholderLua,
         God,
+        Boost,
         Rank1,
         Rank2,
         Rank3,
@@ -63,6 +66,7 @@ public static class DonorGroups
         {
             "акционер" => Shareholder,
             "божество" => God,
+            "boost" => Boost,
             "ранг i" => Rank1,
             "ранг ii" => Rank2,
             "ранг iii" => Rank3,
@@ -100,6 +104,9 @@ public static class DonorGroups
                     break;
                 case God:
                     effective.Add(God);
+                    break;
+                case Boost:
+                    effective.Add(Boost);
                     break;
                 case Rank1:
                     AddRanks(effective, Rank1, Rank4, Rank5, Rank6, Rank7, Rank8, Rank9, Rank10);
@@ -160,6 +167,8 @@ public static class DonorGroups
             if (owned.Contains(rank))
                 tokens.Add(rank);
         }
+        if (owned.Contains(Boost))
+            tokens.Add(Boost);
         return tokens;
     }
 
@@ -167,6 +176,48 @@ public static class DonorGroups
     [
         Rank1, Rank2, Rank3, Rank4, Rank5, Rank6, Rank7, Rank8, Rank9, Rank10
     ];
+
+    public static string? GetTierLocKey(string? tierName)
+    {
+        if (!TryResolveTier(tierName, out var tier))
+            return null;
+
+        return tier switch
+        {
+            Shareholder => "store-vip-tier-shareholder",
+            ShareholderLua => "store-vip-tier-shareholderlua",
+            God => "store-vip-tier-god",
+            Boost => "store-vip-tier-boost",
+            Rank1 => "store-vip-tier-rank1",
+            Rank2 => "store-vip-tier-rank2",
+            Rank3 => "store-vip-tier-rank3",
+            Rank4 => "store-vip-tier-rank4",
+            Rank5 => "store-vip-tier-rank5",
+            Rank6 => "store-vip-tier-rank6",
+            Rank7 => "store-vip-tier-rank7",
+            Rank8 => "store-vip-tier-rank8",
+            Rank9 => "store-vip-tier-rank9",
+            Rank10 => "store-vip-tier-rank10",
+            _ => null,
+        };
+    }
+
+    public static string GetTierDisplayName(string? tierName)
+    {
+        var locKey = GetTierLocKey(tierName);
+        return locKey is null
+            ? (string.IsNullOrWhiteSpace(tierName) ? string.Empty : tierName)
+            : Loc.GetString(locKey);
+    }
+
+    public static string FormatTiersDisplay(IEnumerable<string> roles)
+    {
+        var tokens = GetShopHeaderTokens(roles);
+        if (tokens.Count == 0)
+            return string.Empty;
+
+        return string.Join(", ", tokens.Select(GetTierDisplayName));
+    }
 }
 
 
