@@ -5197,3 +5197,24 @@ Entries:
   id: 338
   time: '2026-09-04T16:11:21.0000000+00:00'
   url: https://github.com/Lua-Frontier/sector-frontier-14/pull/653
+- author: HacksLua
+  changes:
+    - type: Add
+      message: >-
+        Добавлена роль Boost (Дискорд бустер) пока с одной игрушкой
+        (placeholder)
+    - type: Add
+      message: Оверлей администратора расширен
+    - type: Fix
+      message: Правки некоторых калибров (ещё не все)
+    - type: Fix
+      message: Исправлены факсы на замороженных картах
+    - type: Tweak
+      message: Удаление ИИ и обломков улучшено
+    - type: Tweak
+      message: Данжи сделаны меньше
+    - type: Tweak
+      message: Рефактор банковской системы, баланс теперь один на всю учетную запись
+  id: 339
+  time: '2026-09-11T12:08:02.0000000+00:00'
+  url: https://github.com/Lua-Frontier/sector-frontier-14/pull/656
