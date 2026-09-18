@@ -5268,3 +5268,10 @@ Entries:
   id: 343
   time: '2026-09-18T13:45:30.0000000+00:00'
   url: https://github.com/Lua-Frontier/sector-frontier-14/pull/663
+- author: sokovizhimalka
+  changes:
+    - type: Add
+      message: Добавлены чулочки и туфли в четырёх цветах. Их можно найти в одеждомате
+  id: 344
+  time: '2026-09-18T13:47:28.0000000+00:00'
+  url: https://github.com/Lua-Frontier/sector-frontier-14/pull/664
