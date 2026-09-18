@@ -5238,3 +5238,26 @@ Entries:
   id: 341
   time: '2026-09-18T13:22:58.0000000+00:00'
   url: https://github.com/Lua-Frontier/sector-frontier-14/pull/659
+- author: Айко Окада
+  changes:
+    - type: Tweak
+      message: >-
+        На четырёх шаттлах верфи чёрного рынка (Pathfinder, spectre, sprinter,
+        archer) латунное покрытие было заменено на обычное.
+    - type: Add
+      message: >-
+        На шаттле sprinter под стыковочными шлюзами были добавлены направленные
+        вентиляторы.
+    - type: Tweak
+      message: >-
+        На шаттле sprinter два обычных шлюза были заменены на стеклянные их
+        версии.
+    - type: Remove
+      message: На шаттле sprinter были убраны лишние НВ- и ВВ-провода.
+    - type: Fix
+      message: >-
+        На шаттле spectre исправлено положение ВВ-проводов и теперь они
+        наэлектризовывают решётки под окном целиком.
+  id: 342
+  time: '2026-09-18T13:40:44.0000000+00:00'
+  url: https://github.com/Lua-Frontier/sector-frontier-14/pull/662
