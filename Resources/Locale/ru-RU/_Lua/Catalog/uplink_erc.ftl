@@ -44,8 +44,11 @@ uplink-erc-pollock-name = Pollock (6.35x40mm)
 uplink-erc-pollock-desc = Облегченный вариант МК58, использующий более легкий калибр.
 
 uplink-erc-kammerer-name = Каммерер (12 gauge)
-uplink-erc-cammerer-desc = Полуавтоматический дробовик с магазином на 4 ружейных патрона. Классический вариант для охоты на космических медведей.
+uplink-erc-Kammerer-desc = Полуавтоматический дробовик с магазином на 4 ружейных патрона. Классический вариант для охоты на космических медведей.
 
 
 
 store-preset-name-erc-uplink = Аплинк ЭИК
+
+uplink-erc-AmmoBox23x75mmBuckshot-name = Короб дробовых патрон (4 Gauge buckshot)
+uplink-erc-AmmoBox23x75mmBuckshot-desc = Короб на 32 патрона с дробью, для ружий калибра 4 gauge
