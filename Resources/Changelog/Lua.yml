@@ -5332,3 +5332,28 @@ Entries:
   id: 346
   time: '2026-09-18T15:58:02.0000000+00:00'
   url: https://github.com/Lua-Frontier/sector-frontier-14/pull/657
+- author: 25Hydra08
+  changes:
+    - type: Add
+      message: Добавлен Горизонт (by HolyPain & 25Hydra08)
+    - type: Add
+      message: Добавлена Frontline Solutions
+    - type: Add
+      message: Добавлен Pioneer-II - обычный, НТ
+    - type: Add
+      message: Добавлен Pioneer-IIC - гражданский
+    - type: Add
+      message: Добавлен Pioneer-IIS - после аварии, Scrap верфь
+    - type: Add
+      message: Добавлен Pioneer-IIE - экспедиционный
+    - type: Add
+      message: Добавлены дружелюбные таракамоли
+    - type: Remove
+      message: Удалена фракция СРБС
+    - type: Remove
+      message: Удалён Фронтир
+    - type: Tweak
+      message: Изменен набор HolyPain
+  id: 347
+  time: '2026-09-18T17:12:34.0000000+00:00'
+  url: https://github.com/Lua-Frontier/sector-frontier-14/pull/666
